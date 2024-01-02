@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Printing Numbers in Reverse</title>
+</head>
+<body>
+    <h1>Numbers from 10 to 1 in Reverse Order</h1>
+    <div id="numbers"></div>
+    <script>
+        let numbersDiv = document.getElementById("numbers");
+        for (let i = 10; i >= 1; i--) {
+            numbersDiv.innerHTML += i + "<br>";
+        }
+    </script>
+</body>
+</html>
