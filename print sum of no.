@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Factorial Calculator</title>
+  <title>Sum of N Numbers</title>
 </head>
 <body>
-  <h1>Factorial Calculator</h1>
-  <div>Enter a number:</div>
+  <h1>Sum of N Numbers</h1>
+  <div>Enter the value of 'n':</div>
   <input type="number" id="number">
   <button onclick="
-    let inputNumber = document.getElementById('number').value;
-    let result = 1;
+    let n = document.getElementById('number').value;
+    let sum = 0;
+for (let i = 1; i <= n; i++) {
+      sum += i;
+    }
 
-    for (let i = 2; i <= inputNumber; i++) {
-      result *= i;
-
-  }
-
-    document.getElementById('result').innerHTML = 'Factorial of ' + inputNumber + ' is: ' + result;
-  ">Calculate Factorial</button>
+    document.getElementById('result').innerHTML = 'The sum of first ' + n + ' natural numbers is: ' + sum;
+  ">Calculate Sum</button>
   <p id="result"></p>
+
+    
 </body>
 </html>
