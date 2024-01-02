@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Palindrome Checker</title>
+</head>
+<body>
+    <h1>Palindrome Checker</h1>
+    <form onsubmit="return checkPalindrome()">
+        <label for="number">Enter a Number:</label>
+        <input type="number" id="number" name="number" required>
+        <input type="submit" value="Check">
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function checkPalindrome() {
+            event.preventDefault();
+            let num = document.getElementById('number').value;
+            let originalNum = num;
+            let reversedNum = 0;
+
+            while (num > 0) {
+                let digit = num % 10;
+                reversedNum = (reversedNum * 10) + digit;
+                num = Math.floor(num / 10);
+            }
+
+            let result = (originalNum == reversedNum) ? "Palindrome!" : "Not a Palindrome!";
+            document.getElementById('result').innerText = `Number ${originalNum} is ${result}`;
+            
+            return false; // Prevent form submission to retain input
+        }
+    </script>
+</body>
+</html>
