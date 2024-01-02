@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Even Numbers</title>
+</head>
+<body>
+
+  <script>
+    for (let i = 2; i <= 100; i += 2) {
+      console.log(i);
+    }
+  </script>
+
+</body>
+</html>
