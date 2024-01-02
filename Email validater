@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Validation</title>
+</head>
+<body>
+    <h1>Email Validation</h1>
+    <form onsubmit="return validateEmail(event)">
+        <div>Enter Email:</div>
+        <input type="email" id="email" name="email" placeholder="example@example.com" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateEmail(event) {
+            event.preventDefault();
+            let email = document.getElementById('email').value;
+alert("Valid email address: " + email);
+       return false; 
+        }
+    </script>
+</body>
+</html>
