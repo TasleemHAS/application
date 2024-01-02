@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Number Validation</title>
+</head>
+<body>
+    <h1>Mobile Number Validation</h1>
+    <form onsubmit="return validateMobileNumber(event)">
+        <div>Enter Mobile Number:</div>
+        <input type="text" id="mobileNumber" name="mobileNumber" placeholder="Enter 10-digit number" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateMobileNumber(event) {
+            event.preventDefault();
+            let mobileNumber = document.getElementById('mobileNumber').value;
+            let mobilePattern = /^[0-9]{10}$/;
+
+            if (mobilePattern.test(mobileNumber)) {
+                alert("Valid mobile number: " + mobileNumber);
+                return false; // Prevent form submission for demonstration
+            } else {
+                alert("Please enter a valid 10-digit mobile number!");
+                return false; // Stop form submission
+            }
+        }
+    </script>
+</body>
+</html>
