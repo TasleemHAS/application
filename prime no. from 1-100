@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Numbers between 1 and 100</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var result = document.getElementById("result");
+            var primes = [];
+
+            for (let i = 2; i <= 100; i++) {
+                let isPrime = true;
+                for (let j = 2; j < i; j++) {
+                    if (i % j === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) {
+                    primes.push(i);
+                }
+            }
+result.innerHTML = "Prime Numbers between 1 and 100:<br>" + primes.join(", ");
+        });
+    </script>
+</head>
+<body>
+    <h1>Prime Numbers between 1 and 100</h1>
+    <p id="result"></p>
+</body>
+</html>
