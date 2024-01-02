@@ -16,7 +16,7 @@
 
   }
 
-    document.getElementById('result').innerHTML = 'Factorial of ' + inputNumber + ' is: ' + result;
+   document.getElementById('result').innerHTML = 'Factorial of ' + inputNumber + ' is: ' + result;
   ">Calculate Factorial</button>
   <p id="result"></p>
 </body>
